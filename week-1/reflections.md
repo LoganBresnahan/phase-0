@@ -17,3 +17,36 @@ Meditation in the morning, afternoon, and evening. I'm going to break down each 
 ###What is your overall plan for Phase 0 time management?
 Finding a system that works for me and sticking to it before the hard stuff comes.
 
+#1.2 The Command Line
+*What is a shell? What is "bash?": Bash is a version of a shell that is used by GNU operating systems. A shell would be an interpreter for communicating with the machine, giving the user the ability to execute commands that the computer is capable of.
+
+*What was the most challenging for you in going through this material?: I suppose that would be, figuring out how pushd and popd were working.
+
+*Were you able to successfully use all of the commands?: Yes.
+
+*In your opinion, what are the most important commands and arguments to know?: I would say touch, and mkdir and their counterparts. Also, ls which seems to be able to do quite a few things.
+
+*Can you remember what each of the following does of the top of your head? Write what each does.
+
+-pwd: print working directory
+
+-ls: list
+
+-mv: move a file or directory
+
+-cd: change directory
+
+-../: move back a directory and then potentially forward
+
+-touch: create a file
+
+-mkdir: make a directory
+
+-less: show the contents of a file page by page
+
+-rmdir: remove a directory
+
+-rm: remove
+
+-help: show help with a command
+
