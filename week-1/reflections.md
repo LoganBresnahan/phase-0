@@ -50,3 +50,11 @@ Finding a system that works for me and sticking to it before the hard stuff come
 
 -help: show help with a command
 
+#1.4 Forking and Cloning
+###If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+
+I would first ask them if they had git installed on their computer with git -v. Then I would instruct them to make a git repository in their desired location on their machine with git init. I would show them where to click the fork button on GitHub and then show them how to do git clone http........ Forking a repository allows us to create a copy of an already existing project into our user profile on GitHub. I would only advise making a new repository if they were starting a new project from scratch. 
+
+###What struggles did you have setting up git and GitHub? What did you learn in the process?
+
+No struggles yet. I have messed around with Git before. 
