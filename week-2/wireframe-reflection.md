@@ -16,5 +16,5 @@
 ***Which parts of the challenge did you enjoy and which parts did you find tedious?***
 	I really enjoyed spacing out my content. I spent the majority of the time calculating exact distances. I don't find this tedious yet.
 
-	![Not Working](imgs/wireframe-index.png)
-	![Not Working](imgs/wireframe-index-blog.png)
+	![Not Working](/imgs/wireframe-index.png)
+	![Not Working](/imgs/wireframe-index-blog.png)
