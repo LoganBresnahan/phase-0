@@ -1,3 +1,17 @@
-body header h3 {
+body {
     color: #000080;
+    background-color: #fff;
+}
+
+a {
+    color: #800080;
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+
+article {
+    column-count: 3;
 }
