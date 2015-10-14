@@ -13,5 +13,18 @@ a:visited {
 
 
 article {
-    column-count: 3;
+    display: inline-block;
+}
+
+header {
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-variant: small-caps;
+}
+
+#geico {
+    text-align: center;
 }
