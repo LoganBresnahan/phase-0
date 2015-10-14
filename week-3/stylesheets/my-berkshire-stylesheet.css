@@ -25,6 +25,12 @@ h1 {
     font-variant: small-caps;
 }
 
-#geico {
+.geico {
     text-align: center;
+}
+
+section {
+	width:100%; 
+	height: 1px; 
+	background-color: grey;
 }
