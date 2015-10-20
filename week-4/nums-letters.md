@@ -44,3 +44,5 @@ Local variables can also be renamed, the newest value takes precedence.
 ***How was this challenge? Did you get a good review of some of the basics?***
 Yes, it was very basic which is a good thing! Hopefully this gives us 
 a good grounding.
+
+[defining variables](https://github.com/LoganBresnahan/phase-0/blob/master/week-4/defining-variables.rb)
