@@ -1,3 +1,4 @@
+require 'uri'
 #Full name greeting:
 puts "What is your full name, starting with your first name?"
 first_name = gets.chomp
