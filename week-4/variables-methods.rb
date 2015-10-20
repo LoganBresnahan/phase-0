@@ -44,3 +44,7 @@ or if they are strings. You really have to pay attention to how they came about.
 Assigning variables seems pretty straightforward.
 
 =end
+
+https://github.com/LoganBresnahan/phase-0/blob/master/week-4/address/my_solution.rb
+
+https://github.com/LoganBresnahan/phase-0/blob/master/week-4/math/my_solution.rb
