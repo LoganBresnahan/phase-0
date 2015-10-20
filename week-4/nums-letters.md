@@ -46,3 +46,5 @@ Yes, it was very basic which is a good thing! Hopefully this gives us
 a good grounding.
 
 [defining variables](https://github.com/LoganBresnahan/phase-0/blob/master/week-4/defining-variables.rb)
+[simple string](https://github.com/LoganBresnahan/phase-0/blob/master/week-4/simple-string.rb)
+[basic math](https://github.com/LoganBresnahan/phase-0/blob/master/week-4/basic-math.rb)
