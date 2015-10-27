@@ -7,17 +7,24 @@ my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, 
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.keep_if {|x| x.to_s.match(thing_to_find)}
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.keep_if {|x, y| y == thing_to_find}.keys
 end
 
 # Identify and describe the Ruby method(s) you implemented.
 #
+# For the first method, I used .keep_if which is almost exactly like .select.
+# You send .keep_if a block and inside the block I iterate over the items
+# changing them all to strings with .to_s so I can use .match which will
+# match an item with the string argument.
 #
-#
+# For the second method I use .keep_if again, but this time the block uses
+# the equality operand == to match to the correct values in the hash.
+# .keys is called at the end to return just the keys of the matching 
+# values into an array.
 
 # Person 2
 def my_array_modification_method!(source, thing_to_modify)
