@@ -55,3 +55,33 @@ end
 
 
 # 4. Reflection
+=begin
+-Which data structure did you and your pair decide to implement and why?
+
+=>We chose to use an array. It seemed like an easier solution rather 
+than to convert and array to a hash and then back again.
+
+
+-Were you more successful breaking this problem down into implementable 
+pseudocode than the last with a pair?
+
+=>It seemed to be about the same. I still don't understand what DBC really
+wants out of the pseudocode yet so I'm just kind of guessing.
+I feel pseudocode is just a rough English translation of the code?
+
+
+-What issues/successes did you run into when translating your pseudocode 
+to code?
+
+=>I feel like it was roughly the same idea. The code is always more complex.
+
+
+-What methods did you use to iterate through the content? Did you find 
+any good ones when you were refactoring? Were they difficult to 
+implement?
+
+=>We used each and delete_if. Both worked wonders and during refactoring
+we were able to put them on one line.
+
+
+=end
