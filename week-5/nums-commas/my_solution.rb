@@ -25,7 +25,7 @@ def separate_commas(integer)
 	split_i = integer.to_s.reverse#.insert(i + 3, ",").reverse#.split("").join
 	i_leng = split_i.length
 	while i <= i_leng
-
+		
 		if i_leng <= 3
 			p integer.to_s
 			exit
@@ -56,7 +56,7 @@ def separate_commas(integer)
 	end
 end 
 
-separate_commas(100000000)
+separate_commas(10000000)
 
 #if i + 3 > split_i.length then
 #	i+=3, ","
