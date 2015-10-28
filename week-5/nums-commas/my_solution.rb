@@ -45,12 +45,18 @@ def separate_commas(integer)
 			x = 3
 		end
 
-		#break if(i == i_leng + 1) || (i == i_leng + 2) || (i == i_leng - 1) #|| (i % i_leng == 0)
+		break if(i == i_leng + 1) || (i == i_leng + 2) || (i == i_leng - 1) #|| (i % i_leng == 0)
 	end
-	p split_i.reverse
+	if split_i.reverse.start_with?(",")
+		corr_dir = split_i.reverse
+		corr_dir[0] = ""
+		p corr_dir
+	else
+		p split_i.reverse
+	end
 end 
 
-separate_commas(1000000000000000000000000)
+separate_commas(100000000)
 
 #if i + 3 > split_i.length then
 #	i+=3, ","
