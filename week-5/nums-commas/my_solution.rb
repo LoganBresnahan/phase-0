@@ -23,20 +23,23 @@ def separate_commas(integer)
 	i = 0
 	x = 2
 	split_i = integer.to_s.reverse#.insert(i + 3, ",").reverse#.split("").join
-	p split_i
-	while i < split_i.length
+	i_leng = split_i.length
+	while i < i_leng
 		x += 1
 		split_i.insert(i += x, ",")
 		#x -= 1
-		p split_i.reverse
+		#p split_i.reverse
+			if x == 4
+				x = 3
+			end
 		#total_size = split_i.insert(etc)
 		#break if total_size >= split_i.length
-		break if(i == split_i.length + 1) || (i == split_i.length + 2)
+		break if(i == i_leng + 1) || (i == i_leng + 2)
 	end
 	p split_i.reverse
 end 
 
-separate_commas(1000000000)
+separate_commas(100000)
 
 #if i + 3 > split_i.length then
 #	i+=3, ","
