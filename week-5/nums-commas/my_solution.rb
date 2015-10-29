@@ -60,7 +60,7 @@ def separate_comma(integer)
 	end
 end 
 
-separate_comma(100)
+separate_comma(100000000000000000)
 
 
 
@@ -68,3 +68,4 @@ separate_comma(100)
 
 
 # 3. Reflection
+
