@@ -17,13 +17,13 @@ In the method, push a comma every three places from the right.
 Return the new modified parameter.
 
 =end
-
-# 1. Initial Solution
+=begin
+# 1. Initial Solution. WORKS AS PROGRAM BUT WON'T PASS RSPEC
 def separate_comma(integer)
 	i = 0
 	x = 2
 	fake = " "
-	split_i = integer.to_s.reverse#.insert(i + 3, ",").reverse#.split("").join
+	split_i = integer.to_s.reverse
 	i_leng = split_i.length
 	while i <= i_leng
 		
@@ -45,8 +45,6 @@ def separate_comma(integer)
 		if x == 4
 			x = 3
 		end
-		
-		#break if(i == i_leng + 1) || (i == i_leng + 2) || (i == i_leng - 1) #|| (i % i_leng == 0)
 	end
 
 	split_i.strip!
@@ -62,10 +60,62 @@ end
 
 separate_comma(100000000000000000)
 
+# 2. Refactored initial solution. WORKS AS PROGRAM BUT WON'T PASS RSPEC
+def separate_comma(integer)
+	i = 0
+	x = 2
+	fake = " "
+	split_i = integer.to_s.reverse#.insert(i + 3, ",").reverse#.split("").join
+	i_leng = split_i.length
 
+	if i_leng <= 3
 
+	elsif i_leng == 4 || i_leng == 5 || i_leng == 6
+			split_i.insert(3, ",")
+	else
+		while i <= i_leng
+			
+			x += 1
+			split_i << fake
+			split_i.insert(i += x, ",")
+			
+			if x == 4
+				x = 3
+			end
+		end
+	end
 
+	split_i.strip!
+
+	if split_i.reverse.start_with?(",")
+		corr_dir = split_i.reverse
+		corr_dir[0] = ""
+		p corr_dir.strip
+	elsif 
+		p split_i.reverse
+	end
+end 
+
+separate_comma(100000000000000000)
+=end
+
+# 2B. Refactored second solution. DOES PASS RSPEC
+def separate_comma(integer)
+	s_integer = integer.to_s.reverse
+	if s_integer.length <= 3
+		p integer.to_s
+	elsif s_integer.length > 3 && s_integer.length <= 6
+		s_integer.insert(3, ",")
+		p s_integer.reverse
+	elsif s_integer.length > 6 && s_integer.length <= 8
+		s_integer.insert(3, ",") && s_integer.insert(7, ",")
+		p s_integer.reverse
+	end
+end
+
+separate_comma(10000000)
 
 
 # 3. Reflection
+
 
