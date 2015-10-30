@@ -4,7 +4,7 @@ be in an array.
 In the method seperate the names into groups of 4 or 5. 
 Make sure there are at least 3 people in a group.
 =end
-
+=begin
 def group_maker(array)
 	one_array = Array.new
 	two_array = Array.new
@@ -58,8 +58,14 @@ def group_maker(array)
 	p eleven_array
 	p twelve_array
 end
+=end
 
-group_maker(["Syema Ailia", "Alan Alcesto", "Daniel Anderson", "James Artz",
+def group_maker(array)
+	array.shuffle.each_slice(5).to_a.cycle(1) {|x| p x.take(5)}
+end
+
+
+ group_maker(["Syema Ailia", "Alan Alcesto", "Daniel Anderson", "James Artz",
 	"Darius Atmar", "Brian Bensch", "Nicola Beuscher", "Kris Bies", "Logan Bresnahan",
 	"William Brinkert", "Scott Chou", "Bernice Anne W Chua", "Abraham Clark", "Jon Clayton", "Kevin Corso", "Jacob Crofts",
 	"Amaar Faziani", "Soloman Fernandez", "Edward Gemson", "Jamar Gibbs", "Chris Gnomes",
@@ -97,7 +103,9 @@ An array because I though it would be easier to change than a hash.
 
 -What did you learn in the process of refactoring your initial solution? 
 Did you learn any new Ruby methods?
-#need to do.
+The each_slice method seemed to be the key in easily seperating by a
+determined value. I did my blog post on cycle so it seemed like a good way
+to output the information to the screen.
 
 =end
 

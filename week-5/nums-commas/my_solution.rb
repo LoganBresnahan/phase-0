@@ -116,6 +116,19 @@ end
 separate_comma(10000000)
 
 
+ #2C Refactored to use arrays and not limited. Passes Rspec
+ def separate_comma(integer)
+	arr_int = integer.to_s.split("").reverse.each_slice(3).to_a
+	commas = [","] * integer.to_s.length
+	answer = arr_int.zip(commas).flatten.reverse.join
+	if answer.start_with?(",")
+		answer[0] = ""
+		return answer
+	else answer
+	end
+end
+
+p separate_comma(1000000000000000000000000000000000000000000000)
 # 3. Reflection
 
 
