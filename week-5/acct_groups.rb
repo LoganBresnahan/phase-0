@@ -60,6 +60,7 @@ def group_maker(array)
 end
 =end
 
+#Refactored 
 def group_maker(array)
 	array.shuffle.each_slice(5).to_a.cycle(1) {|x| p x.take(5)}
 end
