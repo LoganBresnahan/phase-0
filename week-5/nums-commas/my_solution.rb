@@ -5,18 +5,26 @@
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.
-
+=begin
 # 0. Pseudocode
 
 # What is the input?
+-The input is an integer it can be any size.
 # What is the output? (i.e. What should the code return?)
+-The output should be the integer reformatted to include
+commas in the correct spaces according to the USA standard.
 # What are the steps needed to solve the problem?
-=begin 
-Define a method separate_commas that accepts one positive integer parameter.
-In the method, push a comma every three places from the right.
-Return the new modified parameter.
-
+-Define a method that takes one argument.
+-Turn the argument into a string.
+-Separate the characters in the string.
+-Reverse the string.
+-Once the string is reversed we can count the characters by 3's
+-After 3 characters insert a comma.
+-Reverse the string back for formatting.
+-Remove any extra commas at the front of the string.
+-Make sure the program returns the newly formated argument as a string.
 =end
+
 =begin
 # 1. Initial Solution. WORKS AS PROGRAM BUT WON'T PASS RSPEC
 def separate_comma(integer)
