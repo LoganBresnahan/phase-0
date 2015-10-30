@@ -124,7 +124,7 @@ end
 separate_comma(10000000)
 
 
- #2C Refactored to use arrays and not limited. Passes Rspec
+ #2C Refactored to use arrays and not limited to integer size. Passes Rspec
  def separate_comma(integer)
 	arr_int = integer.to_s.split("").reverse.each_slice(3).to_a
 	commas = [","] * integer.to_s.length
@@ -137,6 +137,36 @@ separate_comma(10000000)
 end
 
 p separate_comma(1000000000000000000000000000000000000000000000)
+
+=begin
 # 3. Reflection
+What was your process for breaking the problem down? What different approaches did you consider?
+=>I felt pretty lost at first, but the first thing I though I need to do was convert the 
+	integer to a string or an array. After that, I knew I needed a way to insert a ","
+	without doing it manually by something like array[4] = ",". In the end I feel like I tried
+	all these ways anyway.
+
+Was your pseudocode effective in helping you build a successful initial solution?
+=>No, only because I did a crappy job at it. I didn't learn how useful it was until I had a GPS
+	and my partner did amazing because of his pseudocode.
 
 
+What Ruby method(s) did you use when refactoring your solution? What difficulties did you have
+implementing it/them? Did it/they significantly change the way your code works? If so, how?
+=>insert() was the key at first to get it done, but on my first go around I was always getting indexing
+	errors because I was trying to insert something into a place it didn't exist. I ended up adding
+	blank space so I would have enough characters to continue putting in commas before my loop ran out.
+	Basically, my initial solution is butt ugly but I like it.
+
+
+How did you initially iterate through the data structure?
+=>Initially I used a while loop and a counter that would count how many spaces till the next comma
+	needed to be inserted. On my final solution I used each_slice which so conveniently gives me back 
+	the desired amount of characters.
+
+Do you feel your refactored solution is more readable than your initial solution? Why?
+=>Yes, a thousand times more readable. It's just a better solution that will work on any integer.
+	I don't know how acceptable my method chaining is though, it can probably confuse some people.
+
+
+=end
