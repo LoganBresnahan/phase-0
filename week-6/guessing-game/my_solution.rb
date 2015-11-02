@@ -70,7 +70,7 @@ class GuessingGame
     @answer = answer
   end
 
-  def guess#(input)
+  def guess
   	@input = gets.chomp.to_i 
   	p :high if @input > @answer
   	p :low if @input < @answer
@@ -94,3 +94,30 @@ end
 
 
 # Reflection
+=begin
+-How do instance variables and methods represent the characteristics 
+and behaviors (actions) of a real-world object?
+  The variables are names of real world objects and the methods are
+  like the combination of those things that produce an action of some kind.
+
+-When should you use instance variables? What do they do for you?
+  You need them when you are trying to share variables between different
+  methods. They allow us to dynamically manipulate variables with different
+  sets of instructions (other methods).
+
+-Explain how to use flow control. Did you have any trouble using it in 
+this challenge? If so, what did you struggle with?
+  Flow control is like sending an object through a set of steps. Once
+  a specific step fulfills this objects purpose the flow is complete
+  and some kind of return happens. When refactoring I struggled with 
+  getting the syntax correct for the if statement. I played around with
+  it till I used the least amount of lines for a specific flow control set.
+
+-Why do you think this code requires you to return symbols? What are 
+the benefits of using symbols?
+  I know symbols take up less memory and there can only be one symbol of
+  a certain name in Ruby at a time. Every object in Ruby has a symbol equated to it
+  for memory purposes so by using a symbol in the first place we save memory.
+
+
+=end
