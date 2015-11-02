@@ -71,32 +71,23 @@ class GuessingGame
   end
 
   def guess#(input)
-  	@input = gets.chomp.to_i
-  	if @input > @answer
-  		p :high
-  	elsif @input < @answer
-  		p :low
-  	else @input == @answer
-  		p :correct
-  	end
+  	@input = gets.chomp.to_i 
+  	p :high if @input > @answer
+  	p :low if @input < @answer
+  	p :correct if @input == @answer
   end
 
   def solved?
-  	if @input == @answer
-  		true
-  	else 
-  		false
-  	end
+  	@input == @answer ? true : false
   end
-
 end
 
 game = GuessingGame.new(36)
 until game.solved?
 	game.guess
 end
-=end
 
+=end
 
 
 
