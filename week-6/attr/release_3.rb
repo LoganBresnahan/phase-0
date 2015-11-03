@@ -74,3 +74,15 @@ puts
 puts "---- printing all profile info -----"
 sleep 0.8
 instance_of_profile.print_info
+
+=begin 
+What changed between the last release and this release?
+  We now have a attr_writer :age.
+
+What was replaced?
+  We replaced the change_my_age method with the attr_writer :age.
+
+Is this code simpler than the last?
+  Yes, six lines become two.
+
+=end
