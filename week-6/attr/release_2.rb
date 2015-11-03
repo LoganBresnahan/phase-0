@@ -79,3 +79,16 @@ puts
 puts "---- printing all profile info -----"
 sleep 0.8
 instance_of_profile.print_info
+
+=begin 
+What changed between the last release and this release?
+  We got rid of the method definition for what_is_age and put in 
+  attr_reader :age
+
+What was replaced?
+  the attr_reader replaced the what_is_age method definition.
+
+Is this code simpler than the last?
+  Yes, three lines become one.
+
+=end
