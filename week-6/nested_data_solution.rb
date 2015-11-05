@@ -6,8 +6,7 @@ array = [[1,2], ["inner", ["eagle", "par", ["FORE", "hook"]]]]
 
 # attempts:
 # ============================================================
-
-
+p array[1][1][2][0]
 
 # ============================================================
 
@@ -18,7 +17,7 @@ hash = {outer: {inner: {"almost" => {3 => "congrats!"}}}}
 
 # attempts:
 # ============================================================
-
+p hash[:outer][:inner]["almost"][3]
 
 
 # ============================================================
@@ -31,7 +30,7 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 # attempts:
 # ============================================================
-
+p nested_data[:array][1][:hash]
 
 
 # ============================================================
@@ -39,9 +38,20 @@ nested_data = {array: ["array", {hash: "finished"}]}
 # RELEASE 3: ITERATE OVER NESTED STRUCTURES
 
 number_array = [5, [10, 15], [20,25,30], 35]
+number_array.each {
+  |element|
+  if element.kind_of?(Array)
+    element.each {|ielem|  p ielem + 5}
+  else 
+    p element + 5
+  end
+  }
 
-
+#Refactored 
+p number_array.flatten.map {|element| element + 5}
 
 # Bonus:
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
+
+startup_names.flatten.map{|element|  element + "ly"}
