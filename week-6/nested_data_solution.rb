@@ -55,3 +55,25 @@ p number_array.flatten.map {|element| element + 5}
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 
 startup_names.flatten.map{|element|  element + "ly"}
+
+#Reflection
+=begin 
+What are some general rules you can apply to nested arrays?
+	Everything can be accessed at some point. You would iterate
+	over them in a similiar manner as a regular array but you need
+	to add a layer of depth to your code.
+
+What are some ways you can iterate over nested arrays?
+	You can flatten an array with the method flatten and use usual 
+	iteration techniques. You can also use a flow technique that will
+	test if an element is another array and then throw another iteration
+	at it.
+
+Did you find any good new methods to implement or did you 
+re-use one you were already familiar with? What was it and why 
+did you decide that was a good option?
+	We though flat_map would do a good job but it would only flatten
+	an array by one level. We were more comfortable with flatten and each
+	which did a fine job.
+
+=end
