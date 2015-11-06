@@ -11,7 +11,9 @@
   I need it to generate a number and a letter within my range. (Bingo) and (1..100).
 -I need to create a check method to check if the column has the number in the bingo board.
 -The check method need to replace the board space with an "X" if the number
-  that was called was in the bingo board.
+  that was called is in the bingo board.
+- I need to make sure the board won't replace duplicate numbers with "X" but only
+  the number that is in the right letter column.
 -I need to display the board after each churn and make it pretty.
 =end
 =begin
