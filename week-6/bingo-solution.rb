@@ -55,6 +55,7 @@
   	puts "#{board[4][0]}|#{board[4][1]}|#{board[4][2]}|#{board[4][3]}|#{board[4][4]}"
   	puts "*============*"
 =end
+
 # Initial Solution
 class BingoBoard
 
@@ -171,17 +172,18 @@ end
 
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
-board = [[47, 44, 71, 8, 88],
-        [22, 69, 75, 65, 73],
-        [83, 85, 97, 89, 57],
-        [25, 31, 96, 68, 51],
-        [75, 70, 54, 80, 83]]
+board = (1..75).to_a.each_slice(15).map {|arr| arr.shuffle.take(5)}
 
 
 new_game = BingoBoard.new(board)
 new_game.call_letter_number
 new_game.check_letter_number
 
+
+#Bonus try random board maker.
+def board_maker
+  board = (1..75).to_a.each_slice(15).map {|arr| arr.shuffle.take(5)}
+end
 
 #Reflection
 =begin 
