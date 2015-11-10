@@ -130,8 +130,34 @@ class VirusPredictor
 end
 
 # Reflection Section
-What are the differences between the two different hash syntaxes shown in the state_data file?
-What does require_relative do? How is it different from require?
-What are some ways to iterate through a hash?
-When refactoring virus_effects, what stood out to you about the variables, if anything?
-What concept did you most solidify in this challenge?
+=begin
+-What are the differences between the two different hash syntaxes shown 
+in the state_data file?
+  We have the normal => which can have any type of key and we have the 
+  colon system that will work for symbols as keys by switching the : to the
+  end of the symbol instead of the front.
+
+-What does require_relative do? How is it different from require?
+  require_relative loads files that are relative to the file from which
+  it was called. It can only look within the current load path. require uses
+  the search path to require.
+
+  require uses the current directory that you are running the program from.
+
+  require_relative uses the directory of where that program itself resides.
+
+-What are some ways to iterate through a hash?
+  each, each_key, each_value. It is a lot like going through an array but you need to iterate 
+  the keys so you can get the values.
+
+-When refactoring virus_effects, what stood out to you about the 
+variables, if anything?
+  I don't think I figured out what they wanted us to do. We played around
+  with the instance variables and didn't find anything definite. 
+
+-What concept did you most solidify in this challenge?
+  private. I didn't know what it did at all. I believe, any method that is
+  private cannot be called on instances of the class. They can only be called inside
+  the class.
+
+=end
