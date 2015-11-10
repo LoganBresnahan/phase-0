@@ -68,20 +68,70 @@ end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
+states = STATE_DATA.keys
+states.each {|state| state.virus_effects if state = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population]) }
 
+# alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+# alabama.virus_effects
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+# jersey.virus_effects
 
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+# california.virus_effects
 
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
-
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
-
+# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
+# alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+
+#Refactored
+class VirusPredictor
+  attr_accessor :state_of_origin, :population_density, :population
+  #It takes arguments and sets equal the instance vairables.
+  def initialize(state_of_origin, population_density, population)
+    @state = state_of_origin
+    @population = population
+    @population_density = population_density
+  end
+  #It calls two methods.
+  def virus_effects
+    predicted_deaths(@population_density, @population, @state)
+    #speed_of_spread(@population_density, @state)
+  end
+
+  private
+  #This method takes three inputs and depending on the value it prints the if else calculation.
+  def predicted_deaths(@population_density, @population, @state)
+    # predicted deaths is solely based on population density
+    speed = 0.0
+    if @population_density >= 200
+      number_of_deaths = (@population * 0.4).floor
+      speed += 0.5
+    elsif @population_density >= 150
+      number_of_deaths = (@population * 0.3).floor
+      speed += 1
+    elsif @population_density >= 100
+      number_of_deaths = (@population * 0.2).floor
+      speed += 1.5
+    elsif @population_density >= 50
+      number_of_deaths = (@population * 0.1).floor
+      speed += 2.0
+    else
+      number_of_deaths = (@population * 0.05).floor
+      speed += 2.5
+    end
+
+    print "#{@state} will lose #{number_of_deaths} people in this outbreak and will spread across the state in #{speed} months.\n\n"
+    #puts " and will spread across the state in #{speed} months.\n\n"
+
+  end
+end
+
+# Reflection Section
+What are the differences between the two different hash syntaxes shown in the state_data file?
+What does require_relative do? How is it different from require?
+What are some ways to iterate through a hash?
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+What concept did you most solidify in this challenge?
