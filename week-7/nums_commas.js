@@ -63,3 +63,24 @@ separate_comma(test);
 
 
 // Reflection
+/*
+-What was it like to approach the problem from the perspective of JavaScript? 
+Did you approach the problem differently?
+	I thought the approach would be the same. It was for our psuedocode at least.
+	My partner had a much better understanding of JS than I did so I was a bit
+	confused most of the time. When I wasn't able to easily turn something into
+	an array or a string and back again I was frustrated. JS seems so busy it confuses me.
+
+-What did you learn about iterating over arrays in JavaScript?
+	It is really complicated? I think you always need somekind of counter to go through
+	an array. We did it with for loops which were hard to follow.
+
+-What was different about solving this problem in JavaScript?
+	Overall, it looks very different. The logic is the same but it will take time for
+	me to feel comfortable with it.
+
+-What built-in methods did you find to incorporate in your refactored solution?
+	reverse, join, and toString were all helpful. I imagine we might be able to do more
+	but even the JS docs confuse me.
+*/
+
