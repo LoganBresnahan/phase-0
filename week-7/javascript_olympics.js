@@ -62,7 +62,8 @@ function Athlete(name, age, sport, quote) {
 
 -What are constructor functions?
 	Constructor functions are a lot like classes in Ruby where you define
-	a method to read and write. 
+	a method to read and write. They take arguments and you can set the 
+	arguments to a method, but I don't think they can do att. 
 
 -How are constructors different from Ruby classes (in your research)?
 	You can define function in them just like methods in Ruby. The this. seems
