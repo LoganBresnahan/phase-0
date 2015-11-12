@@ -15,26 +15,32 @@ var terah = {
 }
 // __________________________________________
 // Write your code below.
-
-
-
-
-
-
-
-
-
-
+var adam = {};
+adam.name = "Adam";
+terah.spouse = adam;
+terah.weight = 125;
+delete terah.eyeColor;
+adam.spouse = terah;
+terah.children = {};
+terah.children.carson = {name: "Carson"};
+terah.children.carter = {name: "Carter"};
+terah.children.colton = {name: "Colton"};
+adam.children = terah.children;
 
 // __________________________________________
 // Reflection: Use the reflection guidelines
-//
-//
-//
-//
-//
-//
+/*
+-What tests did you have trouble passing? What did you do to make it pass? Why did that work?
+	I didn't know how to remove the eyeColor so I had to look up delete. I also tried
+	remove(terah.eyeColor); but remove is not a method.
 
+-How difficult was it to add and delete properties outside of the object itself?
+	It was not. I just had to look it up.
+
+-What did you learn about manipulating objects in this challenge?
+	Pretty much everything we did I learned right now. I now know I can make and empty
+	object and use the dot notation to set different values.
+*/
 
 // __________________________________________
 // Driver Code:  Do not alter code below this line.
