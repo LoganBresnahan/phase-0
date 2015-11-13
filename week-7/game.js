@@ -10,13 +10,19 @@
 // Functions: battle function, add life function.
 
 // Pseudocode
-//
-//
-//
-//
-//
+//DEF OBJECTS for characters in the game.
+//assign FALSE VALUES for main character.
+//assign TRUE VALUES for enemies.
+//DEF VAR energy to keep track of life.
+//DEF FUNCTION for life status that subtracts the energy and outputs if the person is dead. If they are dead quit the game.
+//DEF FUNCTION for battle that takes an ARGUMENT
+//have battel function return a random number.
+//Compare player answer with random number. If the answer are the same then set the object for hero to true and enemy to false.
+//ELSE run the life function.
+//Create a story with ALERT, CONFIRM, and PROMPT to send to the function. End the game if the player dies or quits.
 
 // Initial Code
+//Must be run in the browser.
 var honored_one = {
 	sunglasses: false,
 	table: false,
