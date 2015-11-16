@@ -154,17 +154,18 @@ function median(numberList1, numberList2){
 var arrayOne = [1, 1, 1, 1, 1, 1];
 var arrayTwo = [2, 4, 6, 8, 10];
 
-//console.log(sum(arrayOne,arrayTwo));
+console.log(sum(arrayOne,arrayTwo));
 
 
 
 // mean
-//console.log(mean(arrayOne,arrayTwo));
+console.log(mean(arrayOne,arrayTwo));
 
 // median
 
 
 console.log(median(arrayOne,arrayTwo));
+
 
 //PERSON 5
 
@@ -241,3 +242,22 @@ console.log(mean(arrayOne,arrayTwo));
 
 
 console.log(median(arrayOne,arrayTwo));
+
+
+
+//Reflection
+/*
+After running the code with person 5's refactored solution we only pass the first test:
+sum should be a function. After the code is run we received an error, 
+
+for (var j = 0; j < numberList2.length; j++){
+TypeError: Cannot read property 'length' of undefined
+
+I'm not totally sure what this means, somehow our second argument array isn't accepted by the
+tests? This might mean we need to create two separate methods for each mathematical function. 
+I played around with the code for a bit to see if we needed to input the provided arrays for the 
+tests but I was not successful at getting the tests to pass.
+Overall, I think the group did a great job. Without the tests, but independently, the functions
+do return the sum, mean, and median in the form of an array consisting of both values from each
+array.
+*/
