@@ -64,18 +64,83 @@ var officers = {
 
 // Pseudocode
 
+//1. SET Bob to property of president
+//   2.    SET value to 3
+//3. SET Bob to property of vicePresident
+//   4.    SET value to 3
+//5. SET Bob to property of secretary
+//   6.    SET value to 3
+//7. SET Bob to property of treasurer
+//   8.    SET value to 3
+//9. SET President value to Louise
+//  10. SET vicePresident value to Hermann
+//11. SET secratary value to Fred
+//  12. SET treasurer value to Ivy
 
 // __________________________________________
 // Initial Solution
+//vote.voteCount = function(name, vote){
+//   for (index in voteCount){
+//     switch (votCount[index]){
+//       case president
+//         for (index in votes){
+//           if votes[index].index == president
+//             voteCount.president = votes[index].index
+//         }
+//   }
+// }
 
 
+// totalVotes = {};
 
+//   var funk = function(){
+//     for (index in voteCount){
+//     switch (voteCount[index]){
+//       case president
+//         for (index in votes){
+//           if (votes[index].index == president){
+//             voteCount.president = votes[index].index;
+//         }
+//   }
+// }
+//     }
+//     }
+        
+// console.log(voteCount);
 
+// voteCount.president[keys "Bob"] = votes[keys "names"].president
 
+//console.log(Object.keys(votes[keys]).length);
+var totalVotes = {
+  president: [],
+  vicePresident: [],
+  secretary: [],
+  treasurer: [],
+};
 
+  var addVote = function(){
+  for(var keys in votes){
+   totalVotes.president.push(votes[keys].president);
+   totalVotes.vicePresident.push(votes[keys].vicePresident);
+   totalVotes.secretary.push(votes[keys].secretary);
+   totalVotes.treasurer.push(votes[keys].treasurer);
+ };
+
+addVote;
+console.log(totalVotes);
 
 // __________________________________________
 // Refactored Solution
+// for (var indx in votes) {
+//   if (indx[president] == "Bob"){
+//     voteCount[president] = [].push("bob")
+//   }else if (indx[president] == "Mary"){
+//     voteCount[president] = [].push("Mary")
+//   }
+//   //gradebook[students[indx]] = {};
+//   //gradebook[students[indx]].testScores = scores[indx];
+// };
+
 
 
 
