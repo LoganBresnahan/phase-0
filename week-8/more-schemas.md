@@ -1,6 +1,6 @@
-![broken](../imgs/solar_systems.png "Solar Systems")
+![broken](imgs/solar_systems.png "Solar Systems")
 
-![broken](../imgs/grocery_lists.png "Grocery List")
+![broken](imgs/grocery_lists.png "Grocery List")
 
 ***What is a one-to-one database?***
 When you would have two tables that have an exclusive relationship with
