@@ -35,7 +35,7 @@
 	 inner join states
 	 order by region_id asc;
 
-![blah](tables.jpg "Schema Design")
+![blah](tables.png "Schema Design")
 
 ***What are databases for?***
 A database is a convenient way to store lots of information. You can 
