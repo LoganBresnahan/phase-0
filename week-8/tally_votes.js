@@ -78,39 +78,59 @@ var officers = {
 //  12. SET treasurer value to Ivy
 
 // __________________________________________
-// Initial Solution
-//vote.voteCount = function(name, vote){
-//   for (index in voteCount){
-//     switch (votCount[index]){
-//       case president
-//         for (index in votes){
-//           if votes[index].index == president
-//             voteCount.president = votes[index].index
-//         }
-//   }
-// }
+//Initial Solution
 
 
-// totalVotes = {};
 
-//   var funk = function(){
-//     for (index in voteCount){
-//     switch (voteCount[index]){
-//       case president
-//         for (index in votes){
-//           if (votes[index].index == president){
-//             voteCount.president = votes[index].index;
-//         }
-//   }
-// }
-//     }
-//     }
+
+
+
+
+// __________________________________________
+// Refactored Solution
+for (var indx in votes) {
+  if (indx[president] == "Bob"){
+    voteCount[president] = [].push("bob")
+  }else if (indx[president] == "Mary"){
+    voteCount[president] = [].push("Mary")
+  }
+  //gradebook[students[indx]] = {};
+  //gradebook[students[indx]].testScores = scores[indx];
+};
+
+vote.voteCount = function(name, vote){
+  for (index in voteCount){
+    switch (votCount[index]){
+      case president
+        for (index in votes){
+          if votes[index].index == president
+            voteCount.president = votes[index].index
+        }
+  }
+}
+
+
+totalVotes = {};
+
+  var funk = function(){
+    for (index in voteCount){
+    switch (voteCount[index]){
+      case president
+        for (index in votes){
+          if (votes[index].index == president){
+            voteCount.president = votes[index].index;
+        }
+  }
+}
+    }
+    }
         
-// console.log(voteCount);
 
-// voteCount.president[keys "Bob"] = votes[keys "names"].president
 
-//console.log(Object.keys(votes[keys]).length);
+voteCount.president[keys "Bob"] = votes[keys "names"].president
+
+console.log(Object.keys(votes[keys]).length);
+
 var totalVotes = {
   president: [],
   vicePresident: [],
@@ -128,20 +148,6 @@ var totalVotes = {
 
 addVote;
 console.log(totalVotes);
-
-// __________________________________________
-// Refactored Solution
-// for (var indx in votes) {
-//   if (indx[president] == "Bob"){
-//     voteCount[president] = [].push("bob")
-//   }else if (indx[president] == "Mary"){
-//     voteCount[president] = [].push("Mary")
-//   }
-//   //gradebook[students[indx]] = {};
-//   //gradebook[students[indx]].testScores = scores[indx];
-// };
-
-
 
 
 
