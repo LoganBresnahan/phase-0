@@ -79,7 +79,45 @@ var officers = {
 
 // __________________________________________
 //Initial Solution
+for (var key in votes){
+  voteCount["president"][votes[key]["president"]] = 0;
+  voteCount["vicePresident"][votes[key]["vicePresident"]] = 0;
+  voteCount["secretary"][votes[key]["secretary"]] = 0;
+  voteCount["treasurer"][votes[key]["treasurer"]] = 0;
+  };
 
+for (var key in votes){
+  voteCount["president"][votes[key]["president"]] ++;
+  voteCount["vicePresident"][votes[key]["vicePresident"]] ++;
+  voteCount["secretary"][votes[key]["secretary"]] ++;
+  voteCount["treasurer"][votes[key]["treasurer"]] ++;
+  };
+
+for (var key in voteCount["president"]){
+  if (voteCount["president"][key] >= 10){
+    officers["president"] = key;
+  };
+};
+
+for (var key in voteCount["vicePresident"]){
+  if (voteCount["vicePresident"][key] >= 10){
+    officers["vicePresident"] = key;
+  };
+};
+
+for (var key in voteCount["secretary"]){
+  if (voteCount["secretary"][key] >= 10){
+    officers["secretary"] = key;
+  };
+};
+
+for (var key in voteCount["treasurer"]){
+  if (voteCount["treasurer"][key] >= 10){
+    officers["treasurer"] = key;
+  };
+};
+
+console.log(officers);
 
 
 
