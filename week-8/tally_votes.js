@@ -79,45 +79,45 @@ var officers = {
 
 // __________________________________________
 //Initial Solution
-for (var key in votes){
-  voteCount["president"][votes[key]["president"]] = 0;
-  voteCount["vicePresident"][votes[key]["vicePresident"]] = 0;
-  voteCount["secretary"][votes[key]["secretary"]] = 0;
-  voteCount["treasurer"][votes[key]["treasurer"]] = 0;
-  };
+// for (var key in votes){
+//   voteCount["president"][votes[key]["president"]] = 0;
+//   voteCount["vicePresident"][votes[key]["vicePresident"]] = 0;
+//   voteCount["secretary"][votes[key]["secretary"]] = 0;
+//   voteCount["treasurer"][votes[key]["treasurer"]] = 0;
+//   };
 
-for (var key in votes){
-  voteCount["president"][votes[key]["president"]] ++;
-  voteCount["vicePresident"][votes[key]["vicePresident"]] ++;
-  voteCount["secretary"][votes[key]["secretary"]] ++;
-  voteCount["treasurer"][votes[key]["treasurer"]] ++;
-  };
+// for (var key in votes){
+//   voteCount["president"][votes[key]["president"]] ++;
+//   voteCount["vicePresident"][votes[key]["vicePresident"]] ++;
+//   voteCount["secretary"][votes[key]["secretary"]] ++;
+//   voteCount["treasurer"][votes[key]["treasurer"]] ++;
+//   };
 
-for (var key in voteCount["president"]){
-  if (voteCount["president"][key] >= 10){
-    officers["president"] = key;
-  };
-};
+// for (var key in voteCount["president"]){
+//   if (voteCount["president"][key] >= 10){
+//     officers["president"] = key;
+//   };
+// };
 
-for (var key in voteCount["vicePresident"]){
-  if (voteCount["vicePresident"][key] >= 10){
-    officers["vicePresident"] = key;
-  };
-};
+// for (var key in voteCount["vicePresident"]){
+//   if (voteCount["vicePresident"][key] >= 10){
+//     officers["vicePresident"] = key;
+//   };
+// };
 
-for (var key in voteCount["secretary"]){
-  if (voteCount["secretary"][key] >= 10){
-    officers["secretary"] = key;
-  };
-};
+// for (var key in voteCount["secretary"]){
+//   if (voteCount["secretary"][key] >= 10){
+//     officers["secretary"] = key;
+//   };
+// };
 
-for (var key in voteCount["treasurer"]){
-  if (voteCount["treasurer"][key] >= 10){
-    officers["treasurer"] = key;
-  };
-};
+// for (var key in voteCount["treasurer"]){
+//   if (voteCount["treasurer"][key] >= 10){
+//     officers["treasurer"] = key;
+//   };
+// };
 
-console.log(officers);
+// console.log(officers);
 
 
 
@@ -126,70 +126,25 @@ console.log(officers);
 
 // __________________________________________
 // Refactored Solution
-for (var indx in votes) {
-  if (indx[president] == "Bob"){
-    voteCount[president] = [].push("bob")
-  }else if (indx[president] == "Mary"){
-    voteCount[president] = [].push("Mary")
-  }
-  //gradebook[students[indx]] = {};
-  //gradebook[students[indx]].testScores = scores[indx];
-};
+// for(key in voteCount){
+  //if(key is greatest give to officers)
+//   Object.defineProperty(voteCount, key, {
+//     value: Object.keys(votes)
+//     });
+// };
+// console.log(voteCount);
 
-vote.voteCount = function(name, vote){
-  for (index in voteCount){
-    switch (votCount[index]){
-      case president
-        for (index in votes){
-          if votes[index].index == president
-            voteCount.president = votes[index].index
-        }
-  }
-}
+// Object.getOwnPropertyNames(voteCount).forEach(function(val, idx, array) {
+//   console.log(val + ' -> ' + voteCount[val]);
+// });
 
+// for(key in votes){
+Object.getOwnPropertyNames(votes).forEach(function(val, idx, array) {
+  console.log(val + ' -> ' + votes[val]);
+});
+// }
 
-totalVotes = {};
-
-  var funk = function(){
-    for (index in voteCount){
-    switch (voteCount[index]){
-      case president
-        for (index in votes){
-          if (votes[index].index == president){
-            voteCount.president = votes[index].index;
-        }
-  }
-}
-    }
-    }
-        
-
-
-voteCount.president[keys "Bob"] = votes[keys "names"].president
-
-console.log(Object.keys(votes[keys]).length);
-
-var totalVotes = {
-  president: [],
-  vicePresident: [],
-  secretary: [],
-  treasurer: [],
-};
-
-  var addVote = function(){
-  for(var keys in votes){
-   totalVotes.president.push(votes[keys].president);
-   totalVotes.vicePresident.push(votes[keys].vicePresident);
-   totalVotes.secretary.push(votes[keys].secretary);
-   totalVotes.treasurer.push(votes[keys].treasurer);
- };
-
-addVote;
-console.log(totalVotes);
-
-
-
-
+//Object.keys(votes)
 
 // __________________________________________
 // Reflection
