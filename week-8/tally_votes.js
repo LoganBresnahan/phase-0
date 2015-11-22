@@ -79,81 +79,97 @@ var officers = {
 
 // __________________________________________
 //Initial Solution
-// for (var key in votes){
-//   voteCount["president"][votes[key]["president"]] = 0;
-//   voteCount["vicePresident"][votes[key]["vicePresident"]] = 0;
-//   voteCount["secretary"][votes[key]["secretary"]] = 0;
-//   voteCount["treasurer"][votes[key]["treasurer"]] = 0;
-//   };
+// for(people in votes){
+//   for(key in voteCount){
+//     voteCount[key][people] = 0;
+//   }
+// }
 
-// for (var key in votes){
-//   voteCount["president"][votes[key]["president"]] ++;
-//   voteCount["vicePresident"][votes[key]["vicePresident"]] ++;
-//   voteCount["secretary"][votes[key]["secretary"]] ++;
-//   voteCount["treasurer"][votes[key]["treasurer"]] ++;
-//   };
 
-// for (var key in voteCount["president"]){
-//   if (voteCount["president"][key] >= 10){
-//     officers["president"] = key;
-//   };
-// };
+// for(people in votes){
+//   for(office in votes[people]){
+//     voteCount[office][votes[people][office]] ++;
+//   }
+// }
 
-// for (var key in voteCount["vicePresident"]){
-//   if (voteCount["vicePresident"][key] >= 10){
-//     officers["vicePresident"] = key;
-//   };
-// };
 
-// for (var key in voteCount["secretary"]){
-//   if (voteCount["secretary"][key] >= 10){
-//     officers["secretary"] = key;
-//   };
-// };
-
-// for (var key in voteCount["treasurer"]){
-//   if (voteCount["treasurer"][key] >= 10){
-//     officers["treasurer"] = key;
-//   };
-// };
+// for(spot in voteCount){
+//   var largest = 0;
+//   for(num in voteCount[spot]){
+//     if(voteCount[spot][num] >= largest){
+//       largest = voteCount[spot][num];
+//       officers[spot] = num
+//     }
+//   }
+// }
 
 // console.log(officers);
-
-
-
-
-
-
 // __________________________________________
 // Refactored Solution
-// for(key in voteCount){
-  //if(key is greatest give to officers)
-//   Object.defineProperty(voteCount, key, {
-//     value: Object.keys(votes)
-//     });
-// };
-// console.log(voteCount);
+for(people in votes){
+  for(key in voteCount){
+    voteCount[key][people] = 0;
+  }
+}
 
-// Object.getOwnPropertyNames(voteCount).forEach(function(val, idx, array) {
-//   console.log(val + ' -> ' + voteCount[val]);
-// });
 
-// for(key in votes){
+for(people in votes){
+  for(office in votes[people]){
+    voteCount[office][votes[people][office]] ++;
+  }
+}
+
+
+for(spot in voteCount){
+  var largest = 0;
+  for(num in voteCount[spot]){
+    if(voteCount[spot][num] >= largest){
+      largest = voteCount[spot][num];
+      officers[spot] = num
+    }
+  }
+}
+
+console.log(officers);
+// __________________________________________
+// Reflection
+/*
+-What did you learn about iterating over nested objects in JavaScript?
+  We learned all about the for in loop and how it goes through each key in
+  the object. Most importantly, we learned that the name needs to be different
+  for the key when you're nesting multiple for in's. 
+
+-Were you able to find useful methods to help you with this?
+  Object.defineProperty() might work really well but I'm not sure if it can reach 
+  nested data. 
+
+-What concepts were solidified in the process of working through this challenge?
+  All about objects. I hated everything about them until this challenge shored up
+  some concepts. Though, this challenge was probably the hardest for me yet. 
+  JavaScript is not intuitive for me.
+
+*/
+//___________________________________________
+//NOTES
+/*
+for(key in voteCount){
+  if(key is greatest give to officers)
+  Object.defineProperty(voteCount, key, {value: Object.keys(votes)});
+};
+
+
+Object.getOwnPropertyNames(voteCount).forEach(function(val, idx, array) {
+  console.log(val + ' -> ' + voteCount[val]);
+});
+
+for(key in votes){
 Object.getOwnPropertyNames(votes).forEach(function(val, idx, array) {
   console.log(val + ' -> ' + votes[val]);
 });
-// }
+}
 
-//Object.keys(votes)
-
-// __________________________________________
-// Reflection
-
-
-
-
-
-
+Object.keys(votes)
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
