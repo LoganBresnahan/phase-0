@@ -121,7 +121,8 @@ What concepts did you review in this challenge?
 	Changed the attribute readers to reflect the code.
 
 What is still confusing to you about Ruby?
-	Global variables and what is visible in what scope.
+	Global variables and what is visible in what scope. Calling methods
+	from different classes on different instances of classes.
 
 What are you going to study to get more prepared for Phase 1?
 	All things Ruby. More classes and attr stuff especially. 
