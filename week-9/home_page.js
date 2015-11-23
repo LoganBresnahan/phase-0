@@ -40,3 +40,15 @@ document.getElementById("release-3").style.textSize = "2em";
 // Release 6:
 var tmpl = document.getElementById ('hidden');
 document.body.appendChild (tmpl.content.cloneNode (true))
+
+/* Reflection
+What did you learn about the DOM?
+I learned that it will give me errors on the JavaScript. The formating
+can be hard to get used to because I don't really understand JS very well.
+
+
+What are some useful methods to use to manipulate the DOM?
+.appendchild, .innerHTML, .getElementById these were all brand new but
+they seemed to work well. I will need to do more practice with this.
+
+*/
