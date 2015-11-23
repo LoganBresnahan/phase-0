@@ -30,3 +30,15 @@ p reverse_word("yo")
 
 
 # Reflection
+=begin 
+-What concepts did you review in this challenge?
+Defining methods for Ruby and the difference between map and each
+and which is destructive.
+
+-What is still confusing to you about Ruby?
+Ranges
+
+-What are you going to study to get more prepared for Phase 1?
+
+
+=end
