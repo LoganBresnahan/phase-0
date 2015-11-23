@@ -36,9 +36,9 @@ Defining methods for Ruby and the difference between map and each
 and which is destructive.
 
 -What is still confusing to you about Ruby?
-Ranges
+Ranges and rspec. I never know what is going on with rspec.
 
 -What are you going to study to get more prepared for Phase 1?
-
+More stuff on procs and lambdas as well as utilizing counters.
 
 =end
