@@ -5,7 +5,10 @@
 # This challenge took me [#] hours.
 
 # Pseudocode
-
+# DEF method with one argument
+# Make the argument accessible by individual words.
+# Reverse the words
+# RETURN the new argument but with the individual words reversed.
 
 
 # Initial Solution
