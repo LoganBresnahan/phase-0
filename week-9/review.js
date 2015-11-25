@@ -14,7 +14,7 @@ var groceryList = {}
 function addToList(item, quantity){
 	if(isInteger(quantity)){
 		groceryList[item] = quantity;
-	}else{console.log(quantity + " <-- Quantity must be a number.")}	
+	}else{console.log("\"" + quantity + "\" <-- Quantity must be a number.")}	
 }
 
 function rmFromList(item){
@@ -23,7 +23,7 @@ function rmFromList(item){
 
 function printList(){
 	for(key in groceryList){
-		var counter = key
+		var counter = key;
 		console.log(counter + " " + groceryList[key]);
 	}
 }
@@ -41,6 +41,37 @@ addToList("eggs", 2);
 printList();
 
 //Refactor
+
+function GroceryList(name){
+	name = {};
+	this.print = function(){
+		for(key in name){
+			var counter = key;
+			console.log(counter + " " + name[key]);
+		};
+	};
+	this.add = function(item, amount){
+		if(isInteger(amount)){
+			name[item] = amount;
+		}else{console.log("\"" + amount + "\" <-- Amount must be a number.")}
+	};
+	this.remove = function(item){
+		delete name[item];
+	};
+
+	function isInteger(i){
+		return i % 1 ==0;
+	};
+};
+
+//Driver Code
+var myList = new GroceryList("Logan");
+myList.add("ham", "lots");
+myList.add("eggs", 2);
+myList.remove("eggs");
+myList.add("bacon", 7);
+myList.add("eggs", 3);
+myList.print();
 
 //Reflection
 /*
